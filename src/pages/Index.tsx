@@ -67,7 +67,7 @@ const Index = () => {
   return (
     <div className="min-h-screen bg-background">
       {/* Header */}
-      <header className="border-b bg-white/95 backdrop-blur supports-[backdrop-filter]:bg-white/60 sticky top-0 z-50">
+      <header className="border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 sticky top-0 z-50">
         <div className="container mx-auto px-4 py-4 flex items-center justify-between">
           <div className="flex items-center space-x-2">
             <Icon name="Layers" className="text-primary" size={28} />
@@ -84,11 +84,11 @@ const Index = () => {
       </header>
 
       {/* Hero Section */}
-      <section className="py-20 bg-gradient-to-br from-yellow-50 via-white to-amber-50">
+      <section className="py-20 bg-gradient-to-br from-gray-800 via-gray-900 to-gray-800">
         <div className="container mx-auto px-4 text-center">
           <div className="max-w-4xl mx-auto animate-fade-in">
             <Badge variant="secondary" className="mb-6 text-sm px-4 py-2">New Collection 2024</Badge>
-            <h1 className="text-6xl font-bold mb-8 text-gray-900 leading-tight">
+            <h1 className="text-6xl font-bold mb-8 text-white leading-tight">
               Premium WordPress Templates<br />
               <span className="bg-gradient-to-r from-yellow-500 to-amber-600 bg-clip-text text-transparent">
                 for Your Business
@@ -133,14 +133,14 @@ const Index = () => {
 
             <TabsContent value="all" className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
               {templates.map((template) => (
-                <Card key={template.id} className="overflow-hidden hover:shadow-xl transition-all duration-300 hover:-translate-y-2 animate-scale-in border-0 shadow-lg">
+                <Card key={template.id} className="overflow-hidden hover:shadow-xl transition-all duration-300 hover:-translate-y-2 animate-scale-in bg-card border-border shadow-lg">
                   <div className="aspect-[4/3] relative overflow-hidden">
                     <img 
                       src={template.image} 
                       alt={template.name}
                       className="w-full h-full object-cover hover:scale-110 transition-transform duration-500"
                     />
-                    <Badge className="absolute top-4 left-4 bg-white/90 text-gray-800 hover:bg-white">
+                    <Badge className="absolute top-4 left-4 bg-background/90 text-foreground hover:bg-background">
                       {template.category}
                     </Badge>
                     <div className="absolute top-4 right-4">
@@ -151,14 +151,14 @@ const Index = () => {
                   </div>
                   <CardHeader className="pb-3">
                     <CardTitle className="text-xl mb-2">{template.name}</CardTitle>
-                    <CardDescription className="text-base text-gray-600">{template.description}</CardDescription>
+                    <CardDescription className="text-base text-muted-foreground">{template.description}</CardDescription>
                   </CardHeader>
                   <CardContent>
                     <ul className="space-y-2 mb-6">
                       {template.features.map((feature, index) => (
                         <li key={index} className="flex items-center text-sm">
                           <Icon name="Check" size={16} className="text-green-500 mr-2 flex-shrink-0" />
-                          <span className="text-gray-600">{feature}</span>
+                          <span className="text-muted-foreground">{feature}</span>
                         </li>
                       ))}
                     </ul>
@@ -180,7 +180,7 @@ const Index = () => {
       </section>
 
       {/* Features Section */}
-      <section id="features" className="py-24 bg-gradient-to-r from-gray-50 to-yellow-50">
+      <section id="features" className="py-24 bg-gradient-to-r from-gray-800 to-gray-700">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold mb-6">Why Choose PanetsTemplates?</h2>
@@ -190,7 +190,7 @@ const Index = () => {
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <Card className="text-center border-0 shadow-lg hover:shadow-xl transition-shadow">
+            <Card className="text-center bg-card border-border shadow-lg hover:shadow-xl transition-shadow">
               <CardHeader className="pb-4">
                 <Icon name="Smartphone" size={48} className="mx-auto text-primary mb-4" />
                 <CardTitle className="text-xl">Mobile Responsive</CardTitle>
@@ -202,7 +202,7 @@ const Index = () => {
               </CardContent>
             </Card>
 
-            <Card className="text-center border-0 shadow-lg hover:shadow-xl transition-shadow">
+            <Card className="text-center bg-card border-border shadow-lg hover:shadow-xl transition-shadow">
               <CardHeader className="pb-4">
                 <Icon name="Search" size={48} className="mx-auto text-primary mb-4" />
                 <CardTitle className="text-xl">SEO Optimized</CardTitle>
@@ -214,7 +214,7 @@ const Index = () => {
               </CardContent>
             </Card>
 
-            <Card className="text-center border-0 shadow-lg hover:shadow-xl transition-shadow">
+            <Card className="text-center bg-card border-border shadow-lg hover:shadow-xl transition-shadow">
               <CardHeader className="pb-4">
                 <Icon name="Zap" size={48} className="mx-auto text-primary mb-4" />
                 <CardTitle className="text-xl">Fast Loading</CardTitle>
@@ -226,7 +226,7 @@ const Index = () => {
               </CardContent>
             </Card>
 
-            <Card className="text-center border-0 shadow-lg hover:shadow-xl transition-shadow">
+            <Card className="text-center bg-card border-border shadow-lg hover:shadow-xl transition-shadow">
               <CardHeader className="pb-4">
                 <Icon name="Palette" size={48} className="mx-auto text-primary mb-4" />
                 <CardTitle className="text-xl">Easy Customization</CardTitle>
@@ -238,7 +238,7 @@ const Index = () => {
               </CardContent>
             </Card>
 
-            <Card className="text-center border-0 shadow-lg hover:shadow-xl transition-shadow">
+            <Card className="text-center bg-card border-border shadow-lg hover:shadow-xl transition-shadow">
               <CardHeader className="pb-4">
                 <Icon name="Shield" size={48} className="mx-auto text-primary mb-4" />
                 <CardTitle className="text-xl">Regular Updates</CardTitle>
@@ -250,7 +250,7 @@ const Index = () => {
               </CardContent>
             </Card>
 
-            <Card className="text-center border-0 shadow-lg hover:shadow-xl transition-shadow">
+            <Card className="text-center bg-card border-border shadow-lg hover:shadow-xl transition-shadow">
               <CardHeader className="pb-4">
                 <Icon name="HeadphonesIcon" size={48} className="mx-auto text-primary mb-4" />
                 <CardTitle className="text-xl">24/7 Support</CardTitle>
@@ -276,7 +276,7 @@ const Index = () => {
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-            <Card className="text-center hover:shadow-lg transition-shadow border-0 shadow-md">
+            <Card className="text-center hover:shadow-lg transition-shadow bg-card border-border shadow-md">
               <CardHeader>
                 <Icon name="BookOpen" size={40} className="mx-auto text-primary mb-4" />
                 <CardTitle>Documentation</CardTitle>
@@ -287,7 +287,7 @@ const Index = () => {
               </CardContent>
             </Card>
 
-            <Card className="text-center hover:shadow-lg transition-shadow border-0 shadow-md">
+            <Card className="text-center hover:shadow-lg transition-shadow bg-card border-border shadow-md">
               <CardHeader>
                 <Icon name="MessageCircle" size={40} className="mx-auto text-primary mb-4" />
                 <CardTitle>Support</CardTitle>
@@ -298,7 +298,7 @@ const Index = () => {
               </CardContent>
             </Card>
 
-            <Card className="text-center hover:shadow-lg transition-shadow border-0 shadow-md">
+            <Card className="text-center hover:shadow-lg transition-shadow bg-card border-border shadow-md">
               <CardHeader>
                 <Icon name="Video" size={40} className="mx-auto text-primary mb-4" />
                 <CardTitle>Video Tutorials</CardTitle>
@@ -309,7 +309,7 @@ const Index = () => {
               </CardContent>
             </Card>
 
-            <Card className="text-center hover:shadow-lg transition-shadow border-0 shadow-md">
+            <Card className="text-center hover:shadow-lg transition-shadow bg-card border-border shadow-md">
               <CardHeader>
                 <Icon name="Users" size={40} className="mx-auto text-primary mb-4" />
                 <CardTitle>Community</CardTitle>
@@ -324,7 +324,7 @@ const Index = () => {
       </section>
 
       {/* Footer */}
-      <footer className="bg-gray-900 text-white py-16">
+      <footer className="bg-gray-950 text-white py-16">
         <div className="container mx-auto px-4">
           <div className="grid md:grid-cols-5 gap-8">
             <div className="md:col-span-2">
@@ -392,11 +392,11 @@ const Index = () => {
       </footer>
 
       {/* Contact Section */}
-      <section id="contact" className="py-16 bg-gray-100">
+      <section id="contact" className="py-16 bg-gray-800">
         <div className="container mx-auto px-4 text-center">
-          <h2 className="text-3xl font-bold mb-6">Contact Information</h2>
+          <h2 className="text-3xl font-bold mb-6 text-white">Contact Information</h2>
           <div className="grid md:grid-cols-3 gap-8 max-w-4xl mx-auto">
-            <Card className="border-0 shadow-md">
+            <Card className="bg-card border-border shadow-md">
               <CardHeader>
                 <Icon name="Mail" size={32} className="mx-auto text-primary mb-2" />
                 <CardTitle>Email</CardTitle>
@@ -406,7 +406,7 @@ const Index = () => {
               </CardContent>
             </Card>
 
-            <Card className="border-0 shadow-md">
+            <Card className="bg-card border-border shadow-md">
               <CardHeader>
                 <Icon name="MessageSquare" size={32} className="mx-auto text-primary mb-2" />
                 <CardTitle>Live Chat</CardTitle>
@@ -416,7 +416,7 @@ const Index = () => {
               </CardContent>
             </Card>
 
-            <Card className="border-0 shadow-md">
+            <Card className="bg-card border-border shadow-md">
               <CardHeader>
                 <Icon name="Clock" size={32} className="mx-auto text-primary mb-2" />
                 <CardTitle>Response Time</CardTitle>
