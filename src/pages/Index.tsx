@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog";
 import Icon from "@/components/ui/icon";
 
@@ -11,57 +11,138 @@ const Index = () => {
   const templates = [
     {
       id: 1,
-      name: "Business Pro",
-      category: "Business",
-      price: "$49",
-      image: "/img/1e1513a9-d8a2-4198-8365-59711662b961.jpg",
-      description: "Professional template for corporate websites",
-      features: ["Responsive Design", "SEO Optimized", "WooCommerce Ready"]
+      name: "Avada",
+      category: "Multipurpose",
+      price: "$69",
+      image: "/api/placeholder/400/300",
+      description: "The most popular multipurpose theme with 744,000+ sales. Perfect for any website with unlimited design possibilities.",
+      features: ["Fusion Builder", "100+ Demo Sites", "WooCommerce Ready", "Responsive Design", "SEO Optimized"]
     },
     {
       id: 2,
-      name: "Shop Master",
-      category: "E-commerce",
-      price: "$79",
-      image: "/img/d38458a7-158c-4eba-a4d3-f22cde4ee515.jpg",
-      description: "Powerful template for online stores",
-      features: ["WooCommerce Integration", "Review System", "Multi-currency"]
+      name: "The7",
+      category: "Multipurpose",
+      price: "$39",
+      image: "/api/placeholder/400/300", 
+      description: "Most customizable WordPress theme with 246,000+ sales. Features 25+ pre-built demos and 630+ design options.",
+      features: ["Visual Composer", "25+ Demos", "Ultimate Addons", "Design Wizard", "WooCommerce"]
     },
     {
       id: 3,
-      name: "Creative Studio",
-      category: "Portfolio",
-      price: "$39",
-      image: "/img/30ae846b-d7cd-4607-ba26-3c8698e7726b.jpg",
-      description: "Stylish template for creative professionals",
-      features: ["Portfolio Gallery", "Animations", "Dark Theme"]
+      name: "BeTheme",
+      category: "Multipurpose",
+      price: "$60",
+      image: "/api/placeholder/400/300",
+      description: "Multipurpose responsive theme with 240,000+ sales. Over 650+ pre-built websites for any industry.",
+      features: ["650+ Pre-built Sites", "Muffin Builder", "Responsive", "One-Click Install", "Admin Panel"]
     },
     {
       id: 4,
-      name: "Blog Master",
-      category: "Blog",
-      price: "$29",
-      image: "/img/1e1513a9-d8a2-4198-8365-59711662b961.jpg",
-      description: "Clean and modern blog template",
-      features: ["Typography Focus", "Social Integration", "Newsletter Ready"]
+      name: "Enfold",
+      category: "Multipurpose", 
+      price: "$59",
+      image: "/api/placeholder/400/300",
+      description: "Clean and super flexible theme with 232,000+ sales. Features powerful drag & drop editor.",
+      features: ["Advanced Layout Builder", "18+ Demos", "WooCommerce", "Custom Widgets", "Portfolio"]
     },
     {
       id: 5,
-      name: "Restaurant Pro",
-      category: "Business",
+      name: "Jupiter",
+      category: "Creative",
       price: "$59",
-      image: "/img/d38458a7-158c-4eba-a4d3-f22cde4ee515.jpg",
-      description: "Perfect for restaurants and cafes",
-      features: ["Menu Display", "Reservation System", "Location Maps"]
+      image: "/api/placeholder/400/300",
+      description: "Best Elementor theme with 158,000+ sales. Perfect for creating stunning websites with Elementor.",
+      features: ["Elementor Pro", "150+ Templates", "Header Builder", "WooCommerce", "One Click Import"]
     },
     {
       id: 6,
-      name: "Agency Elite",
-      category: "Business",
+      name: "Salient",
+      category: "Creative",
+      price: "$60", 
+      image: "/api/placeholder/400/300",
+      description: "Popular theme with 123,000+ sales. Front-end editing and extensive template collection.",
+      features: ["Visual Composer", "Portfolio Options", "WooCommerce", "Custom Post Types", "Responsive"]
+    },
+    {
+      id: 7,
+      name: "X Theme", 
+      category: "Creative",
+      price: "$59",
+      image: "/api/placeholder/400/300",
+      description: "Versatile theme with 100,000+ sales. Four unique design stacks in one powerful theme.",
+      features: ["4 Unique Stacks", "Visual Composer", "Cornerstone Page Builder", "WooCommerce", "Extensions"]
+    },
+    {
+      id: 8,
+      name: "Uncode",
+      category: "Creative",
+      price: "$59",
+      image: "/api/placeholder/400/300", 
+      description: "Creative multiuse theme perfect for agencies and freelancers. Modern and pixel-perfect design.",
+      features: ["Frontend Editor", "70+ Concepts", "WooCommerce", "Portfolio Layouts", "Adaptive Images"]
+    },
+    {
+      id: 9,
+      name: "Bridge", 
+      category: "Creative",
       price: "$69",
-      image: "/img/30ae846b-d7cd-4607-ba26-3c8698e7726b.jpg",
-      description: "Premium template for digital agencies",
-      features: ["Team Showcase", "Case Studies", "Client Testimonials"]
+      image: "/api/placeholder/400/300",
+      description: "Creative multipurpose theme with 376+ demos. Perfect for agencies and creative professionals.",
+      features: ["376+ Demos", "QODE Framework", "Visual Composer", "Revolution Slider", "WooCommerce"]
+    },
+    {
+      id: 10,
+      name: "Total",
+      category: "Business",
+      price: "$59", 
+      image: "/api/placeholder/400/300",
+      description: "Responsive multipurpose theme with live Customizer. Built-in drag & drop page builder.",
+      features: ["Live Customizer", "40+ Demos", "Total Theme Core", "WooCommerce", "Custom Post Types"]
+    },
+    {
+      id: 11,
+      name: "Kalium",
+      category: "Creative",
+      price: "$39",
+      image: "/api/placeholder/400/300",
+      description: "Creative theme for professionals and businesses. Portfolio and blog capabilities.",
+      features: ["Portfolio Layouts", "Blog Styles", "WooCommerce", "Visual Composer", "Demo Content"]
+    },
+    {
+      id: 12,
+      name: "Porto",
+      category: "Business", 
+      price: "$59",
+      image: "/api/placeholder/400/300",
+      description: "Ultimate responsive ecommerce theme. Perfect for any business or online store.",
+      features: ["25+ Demos", "Ultimate Addons", "Speed Optimized", "Visual Composer", "WooCommerce"]
+    },
+    {
+      id: 13,
+      name: "Woodmart",
+      category: "E-commerce",
+      price: "$59",
+      image: "/api/placeholder/400/300",
+      description: "Premium WooCommerce theme optimized for online stores. Fast and conversion-focused.",
+      features: ["WooCommerce Focused", "Ajax Shop", "Product Builder", "Header Builder", "Speed Optimized"]
+    },
+    {
+      id: 14,
+      name: "Flatsome",
+      category: "E-commerce", 
+      price: "$59",
+      image: "/api/placeholder/400/300",
+      description: "Best selling WooCommerce theme. Perfect for creating beautiful online stores.",
+      features: ["UX Builder", "Mobile Optimized", "Conversion Focused", "Catalog Mode", "Quick View"]
+    },
+    {
+      id: 15,
+      name: "OceanWP",
+      category: "Multipurpose",
+      price: "$39",
+      image: "/api/placeholder/400/300", 
+      description: "Lightweight and customizable theme. Perfect for any website with excellent performance.",
+      features: ["Lightning Fast", "Elementor Compatible", "WooCommerce Ready", "Translation Ready", "SEO Friendly"]
     }
   ];
 
@@ -72,15 +153,19 @@ const Index = () => {
       {/* Header */}
       <header className="border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 sticky top-0 z-50">
         <div className="container mx-auto px-4 py-4 flex items-center justify-between">
-          <div className="flex items-center space-x-2">
+          <a href="/" className="flex items-center space-x-2 hover:opacity-80 transition-opacity">
             <Icon name="Layers" className="text-primary" size={28} />
             <span className="text-xl font-bold">PanetsTemplates</span>
-          </div>
+          </a>
           <nav className="hidden md:flex items-center space-x-8">
-            <a href="#templates" className="text-muted-foreground hover:text-primary transition-colors">Templates</a>
-            <a href="#features" className="text-muted-foreground hover:text-primary transition-colors">Features</a>
-            <a href="#support" className="text-muted-foreground hover:text-primary transition-colors">Support</a>
-            <a href="#contact" className="text-muted-foreground hover:text-primary transition-colors">Contact</a>
+            <a href="/" className="text-muted-foreground hover:text-primary transition-colors">Templates</a>
+            <div className="flex space-x-4 text-sm text-muted-foreground">
+              <a href="/privacy-policy" className="hover:text-primary transition-colors">Privacy Policy</a>
+              <a href="/contact-information" className="hover:text-primary transition-colors">Contact</a>
+              <a href="/legal-notice" className="hover:text-primary transition-colors">Legal Notice</a>
+              <a href="/terms-of-service" className="hover:text-primary transition-colors">Terms</a>
+              <a href="/refund-policy" className="hover:text-primary transition-colors">Refund</a>
+            </div>
           </nav>
 
         </div>
@@ -107,21 +192,16 @@ const Index = () => {
       </section>
 
       {/* Template Catalog */}
-      <section id="templates" className="py-24">
+      <section id="templates" className="py-12">
         <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
+          <div className="text-center mb-12">
             <h2 className="text-4xl font-bold mb-6">Template Collection</h2>
             <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
               Choose the perfect template for your project from our curated collection
             </p>
           </div>
 
-          <Tabs defaultValue="all" className="w-full">
-            <TabsList className="grid w-full grid-cols-1 max-w-lg mx-auto mb-12 p-1 rounded-full">
-              <TabsTrigger value="all" className="rounded-full">All</TabsTrigger>
-            </TabsList>
-
-            <TabsContent value="all" className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
               {templates.map((template) => (
                 <Card 
                   key={template.id} 
@@ -168,8 +248,7 @@ const Index = () => {
                   </CardContent>
                 </Card>
               ))}
-            </TabsContent>
-          </Tabs>
+          </div>
         </div>
       </section>
 
@@ -264,8 +343,8 @@ const Index = () => {
       {/* Footer */}
       <footer className="py-16">
         <div className="container mx-auto px-4">
-          <div className="grid md:grid-cols-5 gap-8">
-            <div className="md:col-span-2">
+          <div className="grid md:grid-cols-2 gap-8">
+            <div>
               <div className="flex items-center space-x-2 mb-6">
                 <Icon name="Layers" size={28} className="text-yellow-400" />
                 <span className="text-xl font-bold">PanetsTemplates</span>
@@ -274,16 +353,11 @@ const Index = () => {
                 Premium WordPress templates for creating modern, professional websites. 
                 Quality design meets powerful functionality.
               </p>
-
             </div>
 
-
-          </div>
-
-          <div className="border-t border-gray-800 mt-12 pt-8">
-            <div className="flex flex-col md:flex-row justify-between items-center">
-
-              <div className="flex flex-wrap justify-center gap-6 text-sm text-gray-400">
+            <div className="flex flex-col space-y-3">
+              <h3 className="font-semibold mb-2 text-lg">Legal</h3>
+              <div className="flex flex-col space-y-2 text-gray-400">
                 <a href="/privacy-policy" className="hover:text-white transition-colors">Privacy Policy</a>
                 <a href="/contact-information" className="hover:text-white transition-colors">Contact Information</a>
                 <a href="/legal-notice" className="hover:text-white transition-colors">Legal Notice</a>
@@ -292,6 +366,8 @@ const Index = () => {
               </div>
             </div>
           </div>
+
+
         </div>
       </footer>
 
