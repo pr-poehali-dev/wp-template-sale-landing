@@ -37,7 +37,7 @@ const Index = () => {
         "/img/dab7d53e-cbaa-4bea-b980-4463793e6818.jpg",
         "/img/91db1bbe-435d-4dde-b739-1bda1bc50ece.jpg",
         "/img/0cf8b30e-a45f-4891-b5c9-579564708ba4.jpg",
-        "/img/dab7d53e-cbaa-4bea-b980-4463793e6818.jpg"
+        "/img/9b72ebac-7e84-499c-b867-4a07fde008a7.jpg"
       ]
     },
     {
@@ -51,8 +51,8 @@ const Index = () => {
       screenshots: [
         "/img/ba974608-bc58-41a3-b59d-2edfa3bca91d.jpg",
         "/img/1393d4d3-6dba-49e9-91dc-bdfa2b83a265.jpg",
-        "/img/ba974608-bc58-41a3-b59d-2edfa3bca91d.jpg",
-        "/img/1393d4d3-6dba-49e9-91dc-bdfa2b83a265.jpg"
+        "/img/ebec00f4-9a82-46e0-8285-fe68be4f403a.jpg",
+        "/img/0b5e0780-5608-4155-ad4f-fea9a72ac4da.jpg"
       ]
     },
     {
@@ -66,8 +66,8 @@ const Index = () => {
       screenshots: [
         "/img/c7605b4a-b46c-4cd0-958d-6b0b152e0f70.jpg",
         "/img/4a7bf865-20a7-4e12-a4af-8213efc7be8f.jpg",
-        "/img/c7605b4a-b46c-4cd0-958d-6b0b152e0f70.jpg",
-        "/img/4a7bf865-20a7-4e12-a4af-8213efc7be8f.jpg"
+        "/img/1182c687-f570-4298-9d11-a980705a31ce.jpg",
+        "/img/4a871531-7fcd-4f8c-a08b-470f21408549.jpg"
       ]
     },
     {
@@ -81,8 +81,8 @@ const Index = () => {
       screenshots: [
         "/img/96e76196-d3b2-41a9-8c52-f602c8c7d08b.jpg",
         "/img/73e450b3-1121-4ed0-a531-d7277f85e9fc.jpg",
-        "/img/96e76196-d3b2-41a9-8c52-f602c8c7d08b.jpg",
-        "/img/73e450b3-1121-4ed0-a531-d7277f85e9fc.jpg"
+        "/img/ba190c06-07db-419b-8c83-e77154751856.jpg",
+        "/img/e4b02a20-259a-4424-b136-3fd8f0a7e027.jpg"
       ]
     },
     {
@@ -96,8 +96,98 @@ const Index = () => {
       screenshots: [
         "/img/11ca45c0-5dd7-4ead-95f1-3f773cc4a0bf.jpg",
         "/img/fbe4ccb8-0f29-4b3c-927e-d120180507c7.jpg",
-        "/img/11ca45c0-5dd7-4ead-95f1-3f773cc4a0bf.jpg",
-        "/img/fbe4ccb8-0f29-4b3c-927e-d120180507c7.jpg"
+        "/img/6cfc5245-1211-4580-a6c1-df9d6bbbb76f.jpg",
+        "/img/4ae747b8-332f-4492-958d-b035a1fb604f.jpg"
+      ]
+    },
+    {
+      id: 7,
+      name: "FitZone Pro",
+      category: "Fitness & Health",
+      price: "$42",
+      image: "/img/9b72ebac-7e84-499c-b867-4a07fde008a7.jpg",
+      description: "Dynamic fitness gym template with workout programs and trainer profiles. Perfect for gyms, fitness centers and personal trainers looking to expand their online presence.",
+      features: ["Workout Programs", "Trainer Profiles", "Membership Plans", "Class Scheduling", "Progress Tracking"],
+      screenshots: [
+        "/img/9b72ebac-7e84-499c-b867-4a07fde008a7.jpg",
+        "/img/26cca72d-bb3f-42b4-8cbb-704c2757bf44.jpg",
+        "/img/decf8d9c-a6c0-42ec-b2df-385cbc83a624.jpg",
+        "/img/ec6e00dc-3476-4548-8748-deb66b6d5194.jpg"
+      ]
+    },
+    {
+      id: 8,
+      name: "MediCare Plus",
+      category: "Healthcare",
+      price: "$52",
+      image: "/img/ebec00f4-9a82-46e0-8285-fe68be4f403a.jpg",
+      description: "Professional medical clinic template with appointment booking system. Ideal for healthcare providers, clinics and medical practices.",
+      features: ["Appointment Booking", "Doctor Profiles", "Service Catalog", "Patient Portal", "Medical Records"],
+      screenshots: [
+        "/img/ebec00f4-9a82-46e0-8285-fe68be4f403a.jpg",
+        "/img/4a871531-7fcd-4f8c-a08b-470f21408549.jpg",
+        "/img/ba190c06-07db-419b-8c83-e77154751856.jpg",
+        "/img/e4b02a20-259a-4424-b136-3fd8f0a7e027.jpg"
+      ]
+    },
+    {
+      id: 9,
+      name: "PropertyHub",
+      category: "Real Estate",
+      price: "$48",
+      image: "/img/0b5e0780-5608-4155-ad4f-fea9a72ac4da.jpg",
+      description: "Modern real estate template with advanced property search and listings. Perfect for real estate agencies, agents and property management companies.",
+      features: ["Property Listings", "Advanced Search", "Agent Profiles", "Virtual Tours", "Mortgage Calculator"],
+      screenshots: [
+        "/img/0b5e0780-5608-4155-ad4f-fea9a72ac4da.jpg",
+        "/img/6cfc5245-1211-4580-a6c1-df9d6bbbb76f.jpg",
+        "/img/4ae747b8-332f-4492-958d-b035a1fb604f.jpg",
+        "/img/26cca72d-bb3f-42b4-8cbb-704c2757bf44.jpg"
+      ]
+    },
+    {
+      id: 10,
+      name: "EduPlatform",
+      category: "Education",
+      price: "$44",
+      image: "/img/1182c687-f570-4298-9d11-a980705a31ce.jpg",
+      description: "Comprehensive online learning platform template with course management. Ideal for educational institutions, online tutors and e-learning platforms.",
+      features: ["Course Catalog", "Student Dashboard", "Video Lessons", "Progress Tracking", "Certificates"],
+      screenshots: [
+        "/img/1182c687-f570-4298-9d11-a980705a31ce.jpg",
+        "/img/decf8d9c-a6c0-42ec-b2df-385cbc83a624.jpg",
+        "/img/ec6e00dc-3476-4548-8748-deb66b6d5194.jpg",
+        "/img/9b72ebac-7e84-499c-b867-4a07fde008a7.jpg"
+      ]
+    },
+    {
+      id: 11,
+      name: "Luxe Spa",
+      category: "Beauty & Wellness",
+      price: "$46",
+      image: "/img/4a871531-7fcd-4f8c-a08b-470f21408549.jpg",
+      description: "Elegant beauty salon and spa template with booking system. Perfect for beauty salons, spas and wellness centers seeking luxury online presence.",
+      features: ["Service Booking", "Treatment Menu", "Therapist Profiles", "Package Deals", "Gallery Showcase"],
+      screenshots: [
+        "/img/4a871531-7fcd-4f8c-a08b-470f21408549.jpg",
+        "/img/ebec00f4-9a82-46e0-8285-fe68be4f403a.jpg",
+        "/img/0b5e0780-5608-4155-ad4f-fea9a72ac4da.jpg",
+        "/img/1182c687-f570-4298-9d11-a980705a31ce.jpg"
+      ]
+    },
+    {
+      id: 12,
+      name: "SoundWave Studio",
+      category: "Music & Entertainment",
+      price: "$50",
+      image: "/img/ba190c06-07db-419b-8c83-e77154751856.jpg",
+      description: "Professional music studio template with portfolio showcase. Ideal for recording studios, music producers and sound engineers.",
+      features: ["Portfolio Showcase", "Equipment Display", "Booking System", "Artist Profiles", "Audio Samples"],
+      screenshots: [
+        "/img/ba190c06-07db-419b-8c83-e77154751856.jpg",
+        "/img/6cfc5245-1211-4580-a6c1-df9d6bbbb76f.jpg",
+        "/img/4ae747b8-332f-4492-958d-b035a1fb604f.jpg",
+        "/img/26cca72d-bb3f-42b4-8cbb-704c2757bf44.jpg"
       ]
     }
   ];
