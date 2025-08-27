@@ -8,6 +8,7 @@ import Icon from "@/components/ui/icon";
 
 const Index = () => {
   const [selectedTemplate, setSelectedTemplate] = useState(null);
+  const [selectedImage, setSelectedImage] = useState(null);
   const templates = [
     {
       id: 1,
@@ -22,6 +23,81 @@ const Index = () => {
         "https://cdn.poehali.dev/files/cfee154a-490a-4aca-b8b2-19e40a3f7478.jpg", 
         "https://cdn.poehali.dev/files/41ac25d5-652f-4d0f-8275-2f40f2b239d3.jpg",
         "https://cdn.poehali.dev/files/9a2cb54d-1b92-4758-9703-25bbeae3f73c.jpg"
+      ]
+    },
+    {
+      id: 2,
+      name: "ShopMaster Pro",
+      category: "E-commerce",
+      price: "$59",
+      image: "/img/dab7d53e-cbaa-4bea-b980-4463793e6818.jpg",
+      description: "Professional e-commerce template with modern design and powerful features. Perfect for online stores with advanced shopping cart and payment integration.",
+      features: ["WooCommerce Ready", "Payment Gateway", "Product Reviews", "Mobile Responsive", "Inventory Management"],
+      screenshots: [
+        "/img/dab7d53e-cbaa-4bea-b980-4463793e6818.jpg",
+        "/img/91db1bbe-435d-4dde-b739-1bda1bc50ece.jpg",
+        "/img/0cf8b30e-a45f-4891-b5c9-579564708ba4.jpg",
+        "/img/dab7d53e-cbaa-4bea-b980-4463793e6818.jpg"
+      ]
+    },
+    {
+      id: 3,
+      name: "Corporate Elite",
+      category: "Business",
+      price: "$49",
+      image: "/img/ba974608-bc58-41a3-b59d-2edfa3bca91d.jpg",
+      description: "Premium business template designed for corporate websites. Clean professional layout with team showcase and service presentation capabilities.",
+      features: ["Corporate Design", "Team Showcase", "Service Pages", "Contact Forms", "SEO Optimized"],
+      screenshots: [
+        "/img/ba974608-bc58-41a3-b59d-2edfa3bca91d.jpg",
+        "/img/1393d4d3-6dba-49e9-91dc-bdfa2b83a265.jpg",
+        "/img/ba974608-bc58-41a3-b59d-2edfa3bca91d.jpg",
+        "/img/1393d4d3-6dba-49e9-91dc-bdfa2b83a265.jpg"
+      ]
+    },
+    {
+      id: 4,
+      name: "Creative Portfolio",
+      category: "Portfolio",
+      price: "$35",
+      image: "/img/c7605b4a-b46c-4cd0-958d-6b0b152e0f70.jpg",
+      description: "Stunning portfolio template for creative professionals. Features elegant gallery layouts and minimal design to showcase your work beautifully.",
+      features: ["Portfolio Gallery", "Lightbox Effect", "Minimal Design", "Artist Showcase", "Custom Layouts"],
+      screenshots: [
+        "/img/c7605b4a-b46c-4cd0-958d-6b0b152e0f70.jpg",
+        "/img/4a7bf865-20a7-4e12-a4af-8213efc7be8f.jpg",
+        "/img/c7605b4a-b46c-4cd0-958d-6b0b152e0f70.jpg",
+        "/img/4a7bf865-20a7-4e12-a4af-8213efc7be8f.jpg"
+      ]
+    },
+    {
+      id: 5,
+      name: "Gourmet Restaurant",
+      category: "Restaurant",
+      price: "$45",
+      image: "/img/96e76196-d3b2-41a9-8c52-f602c8c7d08b.jpg",
+      description: "Elegant restaurant template with sophisticated design. Perfect for fine dining establishments with menu display and reservation system.",
+      features: ["Menu Display", "Reservation System", "Chef Showcase", "Food Gallery", "Event Booking"],
+      screenshots: [
+        "/img/96e76196-d3b2-41a9-8c52-f602c8c7d08b.jpg",
+        "/img/73e450b3-1121-4ed0-a531-d7277f85e9fc.jpg",
+        "/img/96e76196-d3b2-41a9-8c52-f602c8c7d08b.jpg",
+        "/img/73e450b3-1121-4ed0-a531-d7277f85e9fc.jpg"
+      ]
+    },
+    {
+      id: 6,
+      name: "TechStartup",
+      category: "Technology",
+      price: "$55",
+      image: "/img/11ca45c0-5dd7-4ead-95f1-3f773cc4a0bf.jpg",
+      description: "Modern tech startup template with innovative design. Features company showcase, product demonstration and startup-focused layout elements.",
+      features: ["Startup Focus", "Product Showcase", "Team Pages", "Innovation Timeline", "Tech Integration"],
+      screenshots: [
+        "/img/11ca45c0-5dd7-4ead-95f1-3f773cc4a0bf.jpg",
+        "/img/fbe4ccb8-0f29-4b3c-927e-d120180507c7.jpg",
+        "/img/11ca45c0-5dd7-4ead-95f1-3f773cc4a0bf.jpg",
+        "/img/fbe4ccb8-0f29-4b3c-927e-d120180507c7.jpg"
       ]
     }
   ];
@@ -274,6 +350,7 @@ const Index = () => {
                         src={screenshot} 
                         alt={`Template screenshot ${index + 1}`}
                         className="w-full h-24 object-cover rounded hover:scale-105 transition-transform cursor-pointer"
+                        onClick={() => setSelectedImage(screenshot)}
                       />
                     ))}
                   </div>
@@ -299,18 +376,35 @@ const Index = () => {
                   </div>
                   
                   <div className="flex gap-3">
-                    <Button className="flex-1">
+                    <Button className="w-full">
                       <Icon name="ShoppingCart" className="mr-2" size={16} />
                       Purchase
-                    </Button>
-                    <Button variant="outline">
-                      <Icon name="Eye" className="mr-2" size={16} />
-                      Preview
                     </Button>
                   </div>
                 </div>
               </div>
             </>
+          )}
+        </DialogContent>
+      </Dialog>
+
+      {/* Image Zoom Dialog */}
+      <Dialog open={!!selectedImage} onOpenChange={() => setSelectedImage(null)}>
+        <DialogContent className="max-w-4xl max-h-[90vh] p-0">
+          {selectedImage && (
+            <div className="relative">
+              <img 
+                src={selectedImage} 
+                alt="Enlarged template screenshot"
+                className="w-full h-auto max-h-[90vh] object-contain"
+              />
+              <button 
+                onClick={() => setSelectedImage(null)}
+                className="absolute top-4 right-4 bg-black/50 text-white rounded-full w-8 h-8 flex items-center justify-center hover:bg-black/70 transition-colors"
+              >
+                ✕
+              </button>
+            </div>
           )}
         </DialogContent>
       </Dialog>
