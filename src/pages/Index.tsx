@@ -84,13 +84,13 @@ const Index = () => {
       </header>
 
       {/* Hero Section */}
-      <section className="py-20 bg-gradient-to-br from-blue-50 via-white to-indigo-50">
+      <section className="py-20 bg-gradient-to-br from-yellow-50 via-white to-amber-50">
         <div className="container mx-auto px-4 text-center">
           <div className="max-w-4xl mx-auto animate-fade-in">
             <Badge variant="secondary" className="mb-6 text-sm px-4 py-2">New Collection 2024</Badge>
             <h1 className="text-6xl font-bold mb-8 text-gray-900 leading-tight">
               Premium WordPress Templates<br />
-              <span className="bg-gradient-to-r from-blue-600 to-blue-800 bg-clip-text text-transparent">
+              <span className="bg-gradient-to-r from-yellow-500 to-amber-600 bg-clip-text text-transparent">
                 for Your Business
               </span>
             </h1>
@@ -180,7 +180,7 @@ const Index = () => {
       </section>
 
       {/* Features Section */}
-      <section id="features" className="py-24 bg-gradient-to-r from-gray-50 to-blue-50">
+      <section id="features" className="py-24 bg-gradient-to-r from-gray-50 to-yellow-50">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold mb-6">Why Choose PanetsTemplates?</h2>
@@ -329,7 +329,7 @@ const Index = () => {
           <div className="grid md:grid-cols-5 gap-8">
             <div className="md:col-span-2">
               <div className="flex items-center space-x-2 mb-6">
-                <Icon name="Layers" size={28} className="text-blue-400" />
+                <Icon name="Layers" size={28} className="text-yellow-400" />
                 <span className="text-xl font-bold">PanetsTemplates</span>
               </div>
               <p className="text-gray-400 mb-6 max-w-md">
@@ -337,10 +337,10 @@ const Index = () => {
                 Quality design meets powerful functionality.
               </p>
               <div className="flex space-x-4">
-                <Icon name="Twitter" size={20} className="text-gray-400 hover:text-blue-400 cursor-pointer transition-colors" />
-                <Icon name="Facebook" size={20} className="text-gray-400 hover:text-blue-400 cursor-pointer transition-colors" />
-                <Icon name="Instagram" size={20} className="text-gray-400 hover:text-blue-400 cursor-pointer transition-colors" />
-                <Icon name="Linkedin" size={20} className="text-gray-400 hover:text-blue-400 cursor-pointer transition-colors" />
+                <Icon name="Twitter" size={20} className="text-gray-400 hover:text-yellow-400 cursor-pointer transition-colors" />
+                <Icon name="Facebook" size={20} className="text-gray-400 hover:text-yellow-400 cursor-pointer transition-colors" />
+                <Icon name="Instagram" size={20} className="text-gray-400 hover:text-yellow-400 cursor-pointer transition-colors" />
+                <Icon name="Linkedin" size={20} className="text-gray-400 hover:text-yellow-400 cursor-pointer transition-colors" />
               </div>
             </div>
 
