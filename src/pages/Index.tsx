@@ -79,16 +79,16 @@ const Index = () => {
             <a href="#support" className="text-muted-foreground hover:text-primary transition-colors">Support</a>
             <a href="#contact" className="text-muted-foreground hover:text-primary transition-colors">Contact</a>
           </nav>
-          <Button>Browse Templates</Button>
+
         </div>
       </header>
 
       {/* Hero Section */}
-      <section className="py-20 bg-gradient-to-br from-gray-800 via-gray-900 to-gray-800">
+      <section className="py-20">
         <div className="container mx-auto px-4 text-center">
           <div className="max-w-4xl mx-auto animate-fade-in">
             <Badge variant="secondary" className="mb-6 text-sm px-4 py-2">New Collection 2024</Badge>
-            <h1 className="text-6xl font-bold mb-8 text-white leading-tight">
+            <h1 className="text-6xl font-bold mb-8 leading-tight">
               Premium WordPress Templates<br />
               <span className="bg-gradient-to-r from-yellow-500 to-amber-600 bg-clip-text text-transparent">
                 for Your Business
@@ -180,7 +180,7 @@ const Index = () => {
       </section>
 
       {/* Features Section */}
-      <section id="features" className="py-24 bg-gradient-to-r from-gray-800 to-gray-700">
+      <section id="features" className="py-24">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold mb-6">Why Choose PanetsTemplates?</h2>
@@ -265,66 +265,10 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Support & Documentation */}
-      <section id="support" className="py-24">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold mb-6">Documentation & Support</h2>
-            <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-              Get the most out of your templates with our comprehensive resources
-            </p>
-          </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-            <Card className="text-center hover:shadow-lg transition-shadow bg-card border-border shadow-md">
-              <CardHeader>
-                <Icon name="BookOpen" size={40} className="mx-auto text-primary mb-4" />
-                <CardTitle>Documentation</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <p className="text-muted-foreground mb-4">Detailed setup and customization guides</p>
-                <Button variant="outline" className="rounded-full">Read Docs</Button>
-              </CardContent>
-            </Card>
-
-            <Card className="text-center hover:shadow-lg transition-shadow bg-card border-border shadow-md">
-              <CardHeader>
-                <Icon name="MessageCircle" size={40} className="mx-auto text-primary mb-4" />
-                <CardTitle>Support</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <p className="text-muted-foreground mb-4">Get help from our expert team 24/7</p>
-                <Button variant="outline" className="rounded-full">Contact Support</Button>
-              </CardContent>
-            </Card>
-
-            <Card className="text-center hover:shadow-lg transition-shadow bg-card border-border shadow-md">
-              <CardHeader>
-                <Icon name="Video" size={40} className="mx-auto text-primary mb-4" />
-                <CardTitle>Video Tutorials</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <p className="text-muted-foreground mb-4">Step-by-step video guides</p>
-                <Button variant="outline" className="rounded-full">Watch Videos</Button>
-              </CardContent>
-            </Card>
-
-            <Card className="text-center hover:shadow-lg transition-shadow bg-card border-border shadow-md">
-              <CardHeader>
-                <Icon name="Users" size={40} className="mx-auto text-primary mb-4" />
-                <CardTitle>Community</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <p className="text-muted-foreground mb-4">Connect with other users</p>
-                <Button variant="outline" className="rounded-full">Join Community</Button>
-              </CardContent>
-            </Card>
-          </div>
-        </div>
-      </section>
 
       {/* Footer */}
-      <footer className="bg-gray-950 text-white py-16">
+      <footer className="py-16">
         <div className="container mx-auto px-4">
           <div className="grid md:grid-cols-5 gap-8">
             <div className="md:col-span-2">
@@ -336,12 +280,7 @@ const Index = () => {
                 Premium WordPress templates for creating modern, professional websites. 
                 Quality design meets powerful functionality.
               </p>
-              <div className="flex space-x-4">
-                <Icon name="Twitter" size={20} className="text-gray-400 hover:text-yellow-400 cursor-pointer transition-colors" />
-                <Icon name="Facebook" size={20} className="text-gray-400 hover:text-yellow-400 cursor-pointer transition-colors" />
-                <Icon name="Instagram" size={20} className="text-gray-400 hover:text-yellow-400 cursor-pointer transition-colors" />
-                <Icon name="Linkedin" size={20} className="text-gray-400 hover:text-yellow-400 cursor-pointer transition-colors" />
-              </div>
+
             </div>
 
             <div>
@@ -371,16 +310,14 @@ const Index = () => {
                 <li><a href="#" className="hover:text-white transition-colors">Terms of Service</a></li>
                 <li><a href="#" className="hover:text-white transition-colors">Refund Policy</a></li>
                 <li><a href="#" className="hover:text-white transition-colors">Legal Notice</a></li>
-                <li><a href="#contact" className="hover:text-white transition-colors">Contact Information</a></li>
+
               </ul>
             </div>
           </div>
 
           <div className="border-t border-gray-800 mt-12 pt-8">
             <div className="flex flex-col md:flex-row justify-between items-center">
-              <p className="text-gray-400 mb-4 md:mb-0">
-                &copy; 2024 PanetsTemplates. All rights reserved.
-              </p>
+
               <div className="flex space-x-6 text-sm text-gray-400">
                 <a href="#" className="hover:text-white transition-colors">Privacy Policy</a>
                 <a href="#" className="hover:text-white transition-colors">Terms of Service</a>
@@ -391,43 +328,7 @@ const Index = () => {
         </div>
       </footer>
 
-      {/* Contact Section */}
-      <section id="contact" className="py-16 bg-gray-800">
-        <div className="container mx-auto px-4 text-center">
-          <h2 className="text-3xl font-bold mb-6 text-white">Contact Information</h2>
-          <div className="grid md:grid-cols-3 gap-8 max-w-4xl mx-auto">
-            <Card className="bg-card border-border shadow-md">
-              <CardHeader>
-                <Icon name="Mail" size={32} className="mx-auto text-primary mb-2" />
-                <CardTitle>Email</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <p className="text-muted-foreground">support@panetstemplates.com</p>
-              </CardContent>
-            </Card>
 
-            <Card className="bg-card border-border shadow-md">
-              <CardHeader>
-                <Icon name="MessageSquare" size={32} className="mx-auto text-primary mb-2" />
-                <CardTitle>Live Chat</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <p className="text-muted-foreground">Available 24/7 on our website</p>
-              </CardContent>
-            </Card>
-
-            <Card className="bg-card border-border shadow-md">
-              <CardHeader>
-                <Icon name="Clock" size={32} className="mx-auto text-primary mb-2" />
-                <CardTitle>Response Time</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <p className="text-muted-foreground">Within 2 hours</p>
-              </CardContent>
-            </Card>
-          </div>
-        </div>
-      </section>
     </div>
   );
 };
