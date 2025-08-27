@@ -1,10 +1,13 @@
+import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog";
 import Icon from "@/components/ui/icon";
 
 const Index = () => {
+  const [selectedTemplate, setSelectedTemplate] = useState(null);
   const templates = [
     {
       id: 1,
@@ -87,7 +90,7 @@ const Index = () => {
       <section className="py-20">
         <div className="container mx-auto px-4 text-center">
           <div className="max-w-4xl mx-auto animate-fade-in">
-            <Badge variant="secondary" className="mb-6 text-sm px-4 py-2">New Collection 2024</Badge>
+
             <h1 className="text-6xl font-bold mb-8 leading-tight">
               Premium WordPress Templates<br />
               <span className="bg-gradient-to-r from-yellow-500 to-amber-600 bg-clip-text text-transparent">
@@ -98,16 +101,7 @@ const Index = () => {
               Build professional websites with our carefully crafted templates. 
               Clean design, optimized code, and complete responsiveness guaranteed.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button size="lg" className="text-lg px-8 py-4 rounded-full">
-                <Icon name="Search" className="mr-2" size={20} />
-                Browse Templates
-              </Button>
-              <Button variant="outline" size="lg" className="text-lg px-8 py-4 rounded-full">
-                <Icon name="Play" className="mr-2" size={20} />
-                View Demo
-              </Button>
-            </div>
+
           </div>
         </div>
       </section>
@@ -123,17 +117,17 @@ const Index = () => {
           </div>
 
           <Tabs defaultValue="all" className="w-full">
-            <TabsList className="grid w-full grid-cols-5 max-w-lg mx-auto mb-12 bg-gray-100 p-1 rounded-full">
+            <TabsList className="grid w-full grid-cols-1 max-w-lg mx-auto mb-12 p-1 rounded-full">
               <TabsTrigger value="all" className="rounded-full">All</TabsTrigger>
-              <TabsTrigger value="business" className="rounded-full">Business</TabsTrigger>
-              <TabsTrigger value="ecommerce" className="rounded-full">E-commerce</TabsTrigger>
-              <TabsTrigger value="portfolio" className="rounded-full">Portfolio</TabsTrigger>
-              <TabsTrigger value="blog" className="rounded-full">Blog</TabsTrigger>
             </TabsList>
 
             <TabsContent value="all" className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
               {templates.map((template) => (
-                <Card key={template.id} className="overflow-hidden hover:shadow-xl transition-all duration-300 hover:-translate-y-2 animate-scale-in bg-card border-border shadow-lg">
+                <Card 
+                  key={template.id} 
+                  className="overflow-hidden hover:shadow-xl transition-all duration-300 hover:-translate-y-2 animate-scale-in bg-card border-border shadow-lg cursor-pointer"
+                  onClick={() => setSelectedTemplate(template)}
+                >
                   <div className="aspect-[4/3] relative overflow-hidden">
                     <img 
                       src={template.image} 
@@ -283,51 +277,98 @@ const Index = () => {
 
             </div>
 
-            <div>
-              <h3 className="font-semibold mb-4 text-lg">Products</h3>
-              <ul className="space-y-3 text-gray-400">
-                <li><a href="#" className="hover:text-white transition-colors">WordPress Templates</a></li>
-                <li><a href="#" className="hover:text-white transition-colors">Premium Plugins</a></li>
-                <li><a href="#" className="hover:text-white transition-colors">Design Assets</a></li>
-                <li><a href="#" className="hover:text-white transition-colors">Custom Development</a></li>
-              </ul>
-            </div>
 
-            <div>
-              <h3 className="font-semibold mb-4 text-lg">Support</h3>
-              <ul className="space-y-3 text-gray-400">
-                <li><a href="#" className="hover:text-white transition-colors">Documentation</a></li>
-                <li><a href="#" className="hover:text-white transition-colors">Technical Support</a></li>
-                <li><a href="#" className="hover:text-white transition-colors">Video Tutorials</a></li>
-                <li><a href="#" className="hover:text-white transition-colors">FAQ</a></li>
-              </ul>
-            </div>
-
-            <div>
-              <h3 className="font-semibold mb-4 text-lg">Legal</h3>
-              <ul className="space-y-3 text-gray-400">
-                <li><a href="#" className="hover:text-white transition-colors">Privacy Policy</a></li>
-                <li><a href="#" className="hover:text-white transition-colors">Terms of Service</a></li>
-                <li><a href="#" className="hover:text-white transition-colors">Refund Policy</a></li>
-                <li><a href="#" className="hover:text-white transition-colors">Legal Notice</a></li>
-
-              </ul>
-            </div>
           </div>
 
           <div className="border-t border-gray-800 mt-12 pt-8">
             <div className="flex flex-col md:flex-row justify-between items-center">
 
-              <div className="flex space-x-6 text-sm text-gray-400">
-                <a href="#" className="hover:text-white transition-colors">Privacy Policy</a>
-                <a href="#" className="hover:text-white transition-colors">Terms of Service</a>
-                <a href="#" className="hover:text-white transition-colors">Contact</a>
+              <div className="flex flex-wrap justify-center gap-6 text-sm text-gray-400">
+                <a href="/privacy-policy" className="hover:text-white transition-colors">Privacy Policy</a>
+                <a href="/contact-information" className="hover:text-white transition-colors">Contact Information</a>
+                <a href="/legal-notice" className="hover:text-white transition-colors">Legal Notice</a>
+                <a href="/terms-of-service" className="hover:text-white transition-colors">Terms of Service</a>
+                <a href="/refund-policy" className="hover:text-white transition-colors">Refund Policy</a>
               </div>
             </div>
           </div>
         </div>
       </footer>
 
+      {/* Template Details Dialog */}
+      <Dialog open={!!selectedTemplate} onOpenChange={() => setSelectedTemplate(null)}>
+        <DialogContent className="max-w-4xl max-h-[80vh] overflow-y-auto">
+          {selectedTemplate && (
+            <>
+              <DialogHeader>
+                <DialogTitle className="text-2xl">{selectedTemplate.name}</DialogTitle>
+              </DialogHeader>
+              <div className="grid md:grid-cols-2 gap-6">
+                <div>
+                  <img 
+                    src={selectedTemplate.image} 
+                    alt={selectedTemplate.name}
+                    className="w-full h-64 object-cover rounded-lg mb-4"
+                  />
+                  <div className="grid grid-cols-2 gap-2">
+                    <img 
+                      src="/api/placeholder/300/200" 
+                      alt="Template screenshot 1"
+                      className="w-full h-24 object-cover rounded"
+                    />
+                    <img 
+                      src="/api/placeholder/300/200" 
+                      alt="Template screenshot 2"
+                      className="w-full h-24 object-cover rounded"
+                    />
+                    <img 
+                      src="/api/placeholder/300/200" 
+                      alt="Template screenshot 3"
+                      className="w-full h-24 object-cover rounded"
+                    />
+                    <img 
+                      src="/api/placeholder/300/200" 
+                      alt="Template screenshot 4"
+                      className="w-full h-24 object-cover rounded"
+                    />
+                  </div>
+                </div>
+                <div>
+                  <Badge className="mb-4">{selectedTemplate.category}</Badge>
+                  <p className="text-muted-foreground mb-6">{selectedTemplate.description}</p>
+                  
+                  <div className="mb-6">
+                    <h4 className="font-semibold mb-3">Features:</h4>
+                    <ul className="space-y-2">
+                      {selectedTemplate.features.map((feature, index) => (
+                        <li key={index} className="flex items-center text-sm">
+                          <Icon name="Check" size={16} className="text-green-500 mr-2" />
+                          {feature}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                  
+                  <div className="flex items-center justify-between mb-6">
+                    <span className="text-2xl font-bold">{selectedTemplate.price}</span>
+                  </div>
+                  
+                  <div className="flex gap-3">
+                    <Button className="flex-1">
+                      <Icon name="ShoppingCart" className="mr-2" size={16} />
+                      Purchase
+                    </Button>
+                    <Button variant="outline">
+                      <Icon name="Eye" className="mr-2" size={16} />
+                      Preview
+                    </Button>
+                  </div>
+                </div>
+              </div>
+            </>
+          )}
+        </DialogContent>
+      </Dialog>
 
     </div>
   );
