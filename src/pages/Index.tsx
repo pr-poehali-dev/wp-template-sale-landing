@@ -11,21 +11,6 @@ const Index = () => {
   const [selectedImage, setSelectedImage] = useState(null);
   const templates = [
     {
-      id: 1,
-      name: "Travel Booking",
-      category: "Travel & Tourism",
-      price: "$39",
-      image: "https://cdn.poehali.dev/files/50759103-be03-40f1-a2a6-1c446c5c10b2.jpg",
-      description: "Perfect travel booking template combining innovation and functionality. Features responsive design for easy destination exploration and booking across all devices.",
-      features: ["Responsive Layout", "Travel Package Browsing", "Booking System", "Blog Integration", "Travel Tips Section"],
-      screenshots: [
-        "https://cdn.poehali.dev/files/50759103-be03-40f1-a2a6-1c446c5c10b2.jpg",
-        "https://cdn.poehali.dev/files/cfee154a-490a-4aca-b8b2-19e40a3f7478.jpg", 
-        "https://cdn.poehali.dev/files/41ac25d5-652f-4d0f-8275-2f40f2b239d3.jpg",
-        "https://cdn.poehali.dev/files/9a2cb54d-1b92-4758-9703-25bbeae3f73c.jpg"
-      ]
-    },
-    {
       id: 2,
       name: "ShopMaster Pro",
       category: "E-commerce",
